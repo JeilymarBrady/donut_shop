@@ -1,5 +1,5 @@
 'use strict'
-//Declares and instantiates the necessary properties
+//Donut shop constructor, declares and instantiates the necessary properties
 var Shop = function(shopName, minCustomers, maxCustomers, avgDonuts){
   this.shopName = shopName;
   this.minCustomers = minCustomers;
@@ -9,43 +9,8 @@ var Shop = function(shopName, minCustomers, maxCustomers, avgDonuts){
   this.totalDonuts = 0;
 };
 
-//Runs the program to DOM
+//Runs the program to DOM, creates a row for the given shop and fills in the corresponding data (aka magic)
 Shop.prototype.render = function(){
-  this.insertShop();
-};
-
-Shop.prototype.donutsPerDay = function(){
-  //Fills in the array 'hourly'
-  for(var i = 0; i < 11; i++){
-    this.hourly[i] = (Math.floor((Math.random() * (this.maxCustomers - this.minCustomers + 1) + this.minCustomers) * this.avgDonuts));
-  }
-  //The sum of the array 'hourly' to get the total number of donuts that day
-  for (var j = 0; j < this.hourly.length; j++){
-    this.totalDonuts += this.hourly[j];
-  }
-};
-
-//Finds body in html and creates a table
-var body = document.body;
-var tbl  = document.createElement('table');
-
-//Creates the header for the table: 'hours, times, total'
-var createTable = (function(){
-  tbl.style.width  = '100px';
-  tbl.style.border = '1px solid black';
-  var tr = tbl.insertRow();
-  var rowData = "<td><b>" + 'Shops' + "</b></td>";
-  for(var i = 0; i < 11; i++){
-    var time = 700 + (i*100);
-    rowData += "<td>" + time + "</td>";
-  }
-  tr.innerHTML = rowData + "<td><b>" + 'Totals' + "</b></td>";
-  tbl.appendChild(tr);
-  body.appendChild(tbl);
-})();
-
-//Creates a row for the given shop and fills in the corresponding data (aka magic)
-Shop.prototype.insertShop = function(){
   this.donutsPerDay();
   var tr = tbl.insertRow();
   var rowData = "<td><b>" + this.shopName + "</b></td>";
@@ -56,7 +21,33 @@ Shop.prototype.insertShop = function(){
   tbl.appendChild(tr);
 };
 
-//Declaring and instantiating new shops --> calling render to add to table
+Shop.prototype.donutsPerDay = function(){
+  for(var i = 0; i < 11; i++){
+    this.hourly[i] = (Math.floor((Math.random() * (this.maxCustomers - this.minCustomers + 1) + this.minCustomers) * this.avgDonuts));
+  }
+  for (var j = 0; j < this.hourly.length; j++){
+    this.totalDonuts += this.hourly[j];
+  }
+};
+
+var body = document.body;
+var tbl  = document.createElement('table');
+
+//Creates the header for the table: 'hours, times, total'
+var createHeader = (function(){
+  tbl.style.width  = '100px';
+  tbl.style.border = '5px solid black';
+  var tr = tbl.insertRow();
+  var rowData = "<td><b>" + 'Shops' + "</b></td>";
+  for(var i = 0; i < 11; i++){
+    var time = 700 + (i*100);
+    rowData += "<td><u>" + time + "</u</td>";
+  }
+  tr.innerHTML = rowData + "<td><b>" + 'Totals' + "</b></td>";
+  tbl.appendChild(tr);
+  body.appendChild(tbl);
+})();
+
 var downtown = new Shop('Downtown', 8, 43, 4.5);
 var capitolHill = new Shop('Capitol Hill', 4, 37, 2);
 var southLakeUnion = new Shop('South Lake Union', 9, 23, 6.33);
