@@ -1,3 +1,4 @@
+//Declares and instantiates the necessary properties
 var Shop = function(shopName, minCustomers, maxCustomers, avgDonuts){
   this.shopName = shopName;
   this.minCustomers = minCustomers;
@@ -43,6 +44,7 @@ Shop.prototype.donutsPerDay = function(){
   console.log(this.totalDonuts + ' totalDonuts');
 };
 
+//Finds body in html and creates a table
 var body = document.body;
 var tbl  = document.createElement('table');
 
