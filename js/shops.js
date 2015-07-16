@@ -21,7 +21,6 @@ Shop.prototype.render = function(){
     }
     update[update.length - 1].innerHTML = this.totalDonuts;
   } else {
-    console.log("render - continue making new shop");
     var tr = tbl.insertRow();
     tr.id = this.shopName;
     var rowData = "<td><b>" + this.shopName + "</b></td>";
@@ -36,7 +35,6 @@ Shop.prototype.render = function(){
 Shop.prototype.donutsPerDay = function(){
   for(var i = 0; i < 11; i++){
     this.totalDonuts += this.hourly[i] = (Math.floor((Math.random() * (this.maxCustomers - this.minCustomers + 1) + this.minCustomers) * this.avgDonuts));
-    //this.totalDonuts += this.hourly[i];
   }
 };
 
@@ -66,7 +64,6 @@ pull.addEventListener('submit', function(e){
   var minC = parseInt(document.getElementById('minCustomers').value);
   var maxC = parseInt(document.getElementById('maxCustomers').value);
   var avgD = parseInt(document.getElementById('avgDonuts').value);
-  console.log("Running click " + shopN + minC + maxC + avgD);
   var createShop = new Shop(shopN, minC, maxC, avgD);
   createShop.render();
 });

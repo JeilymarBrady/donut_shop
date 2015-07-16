@@ -7,3 +7,6 @@ Cleaned it up, removed unneccessary code and if/else statements
 
 Add and update html through 'form'
 071515
+
+Added styling!
+071615
