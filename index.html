@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+  <meta charset="UTF-8">
+  <title>Shops Data</title>
+ </head>
+
+ <body>
+  Top Pot Shops!
+  <div id="insertTable"></div>
+  <p></p>
+  <div id="userInput">
+    <form id="createStore">
+      <fieldset>
+        <legend><em><b>Add or edit a location</b></em></legend>
+        <p>
+          <label for="name"> Location name: </label>
+          <input type="text" id="name" placeholder="Town Name">
+        </p>
+        <p>
+          <label for="minCustomers"> Minimum hourly customers: </label>
+          <input type="text" id="minCustomers" placeholder="0">
+        </p>
+        <p>
+          <label for="maxCustomers"> Maximum hourly customers: </label>
+          <input type="text" id="maxCustomers" placeholder="0">
+        </p>
+        <p>
+          <label for="avgDonuts"> Average donuts per customer: </label>
+          <input type="text" id="avgDonuts" placeholder="0.0">
+        </p>
+        <input type="submit">
+      </fieldset>
+    </form>
+  </div>
+  <script src = "shops.js"></script>
+ </body>
+
+</html>
