@@ -12,18 +12,16 @@ var Shop = function(shopName, minCustomers, maxCustomers, avgDonuts){
 //Runs the program to DOM, creates a row for the given shop and fills in the corresponding data (aka magic)
 Shop.prototype.render = function(){
   this.donutsPerDay();
-
-  if(document.getElementById(this.shopName)){
+  if(document.getElementById(this.shopName.toUpperCase())){
     var update = document.getElementById(this.shopName).childNodes;
-    //Replaces childnodes of existing row with new data
     for(var j = 1; j < update.length-1; j++){
       update[j].innerHTML = this.hourly[j-1];
     }
     update[update.length - 1].innerHTML = this.totalDonuts;
   } else {
     var tr = tbl.insertRow();
-    tr.id = this.shopName;
-    var rowData = "<td><b>" + this.shopName + "</b></td>";
+    tr.id = this.shopName.toUpperCase();
+    var rowData = "<td>" + this.shopName + "</td>";
     for(var i = 0; i < this.hourly.length; i++){
       rowData += "<td>" + this.hourly[i] + "</td>";
     }
@@ -31,7 +29,6 @@ Shop.prototype.render = function(){
     tbl.appendChild(tr);
   }
 };
-
 Shop.prototype.donutsPerDay = function(){
   for(var i = 0; i < 11; i++){
     this.totalDonuts += this.hourly[i] = (Math.floor((Math.random() * (this.maxCustomers - this.minCustomers + 1) + this.minCustomers) * this.avgDonuts));
@@ -44,15 +41,14 @@ tbl.id = "Donut_Table";
 
 //Creates the header for the table: 'hours, times, total'
 var createHeader = (function(){
-  tbl.style.width  = '25px';
-  tbl.style.border = '3px solid black';
   var tr = tbl.insertRow();
-  var rowData = "<td><b>" + 'Shops' + "</b></td>";
+  tr.id = "table_header";
+  var rowData = "<td id='shops'>" + 'Shops' + "</td>";
   for(var i = 0; i < 11; i++){
     var time = 700 + (i*100);
-    rowData += "<td><u>" + time + "</u</td>";
+    rowData += "<td class='times'>" + time + "</td>";
   }
-  tr.innerHTML = rowData + "<td><b>" + 'Totals' + "</b></td>";
+  tr.innerHTML = rowData + "<td id='totals'>" + 'Totals' + "</td>";
   tbl.appendChild(tr);
   body.appendChild(tbl);
 })();
