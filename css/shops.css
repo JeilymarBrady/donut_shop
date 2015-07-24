@@ -18,6 +18,10 @@
   justify-content: space-between;
 }
 
+.header, .ul{
+  margin: .5em 1em .5em 1em;
+}
+
 li {
   display: inline-block;
   list-style: none;
@@ -56,11 +60,7 @@ body {
   border: 5px solid antiquewhite;
   border-radius: 10px;
   text-align: center;
-  margin-top: 60px;
-  margin-right: 100px;
-  margin-bottom: 60px;
-  margin-left: 10px;
-  float: right;
+  margin-top: 60 100 60 10;
 }
 
 legend{
@@ -80,50 +80,71 @@ tr:hover:not(#table_header) td{
   color: #FF5722;
 }
 
-fieldset{
+.table_form{
   width: 500px;
   margin-top: 25px;
   margin-left: 100px;
-  float: left;
   color: #F3843E;
   text-align: center;
 }
 
-.shops, .options, .follow, .contact{
+.shops, .about, .donuts, .contact{
     text-align: center;
 }
 
-.headerS, .headerO, .headerF, .headerC{
+.headerS, .headerA, .headerD, .headerC{
   padding: 1%;
   font-style: oblique;
 }
 
-.follow{
-  color: #FF5722;
-  background-image: url("http://www.wallbacks.com/walls/colorful-donuts-food-wide.jpg");
-  height: 46.5em;
-  width: 100%;
+.p1{
+  height: 70%;
+  width: 30%;
+  margin-right: 100px;
 }
 
-.options, .contact{
+.p2{
+  height: 70%;
+  width: 30%;
+  margin-left: 100px;
+  margin-bottom: 1em;
+}
+
+.donuts{
+  background-color: #FF5722;
+  color: antiquewhite;
+  width: 100%;
+  padding-bottom: 1em;
+}
+
+.about, .contact{
   background-color: antiquewhite;
   color: #FF5722;
+  margin-bottom: 1em;
 }
 
-.optionsP, .contactP{
+.aboutP{
   padding-bottom: 1em;
-  margin: 0 15% 0 15%;
+  margin: 0 7% 0 7%;
   width: 70%;
   color: black;
+  text-align: left;
 }
 
-.followP{
+.donutsP{
+  text-align: left;
   padding-bottom: 1em;
-  margin: 0 15% 0 15%;
+  margin: 0 7% 0 7%;
   width: 70%;
-  color: #FF5722;
+  color: antiquewhite;
 }
 
+.email_form{
+  margin: 1.5em auto;
+  width: 500px;
+  color: #F3843E;
+  text-align: center;
+}
 
 #social{
   display: inline-block;
@@ -132,29 +153,22 @@ fieldset{
 
 a{
   box-sizing: border-box;
-  display: block;
-  width: 50px;
-  height: 50px;
-  margin: 0 5px;
-  float: left;
-  font-size: 1rem;
-  line-height: 50px;
-  color: white;
+  display: inline-block;
+  margin: 0 .2em 0 .2em;
+  font-size: 1em;
   transition: all 250ms ease-in-out;
 }
 
-a:hover{
-  margin-top: -5px;
-}
-
 #linkedin, #github, #facebook, #twitter, #email{
+  display: inline-block;
   font-size: 0;
 /*  text-align: center;*/
-  width: 50px;  /* Container's dimensions */
-  height: 50px;
+  width: 35px;  /* Container's dimensions */
+  height: 35px;
 }
 #linkedin:hover, #github:hover, #facebook:hover, #twitter:hover, #email:hover{
   display: inline-block;
   vertical-align: middle;
-  height: 150px;
+  margin-top: -5px;
+  margin-bottom: 5px;
 }
