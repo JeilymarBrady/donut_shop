@@ -1,0 +1,160 @@
+*{
+  font-family: Open Sans;
+  font-size: 1.05em;
+}
+.wrapper{
+  color: #FF5722;
+  font-style: oblique;
+  font-weight: bold;
+  text-align: center;
+  background-color: antiquewhite;
+  width: 100%;
+  top: 0px;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  flex-flow: space-around;
+  justify-content: space-between;
+}
+
+li {
+  display: inline-block;
+  list-style: none;
+  padding: .5em;
+}
+.shops{
+  margin-top: 5.5em;
+}
+.shops{
+  background-color: white;
+  padding-bottom: 1em;
+}
+.header {
+  text-align: center;
+  color: #FF5722;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  flex-flow: space-around;
+  justify-content: center;
+}
+
+body {
+  background-color: antiquewhite;
+}
+
+.headerS{
+  color: #FF5722;
+}
+
+#Donut_Table {
+  width: 25px;
+  border: 5px solid antiquewhite;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 60px;
+  margin-right: 100px;
+  margin-bottom: 60px;
+  margin-left: 10px;
+  float: right;
+}
+
+legend{
+  font-weight: bold;
+  color: #FF5722;
+}
+
+#shops, #totals, .times, .one{
+  color: #FF5722;
+  font-weight: bold;
+}
+
+td{
+  border-radius: 5px;
+}
+tr:hover:not(#table_header) td{
+  color: #FF5722;
+}
+
+fieldset{
+  width: 500px;
+  margin-top: 25px;
+  margin-left: 100px;
+  float: left;
+  color: #F3843E;
+  text-align: center;
+}
+
+.shops, .options, .follow, .contact{
+    text-align: center;
+}
+
+.headerS, .headerO, .headerF, .headerC{
+  padding: 1%;
+  font-style: oblique;
+}
+
+.follow{
+  color: #FF5722;
+  background-image: url("http://www.wallbacks.com/walls/colorful-donuts-food-wide.jpg");
+  height: 46.5em;
+  width: 100%;
+}
+
+.options, .contact{
+  background-color: antiquewhite;
+  color: #FF5722;
+}
+
+.optionsP, .contactP{
+  padding-bottom: 1em;
+  margin: 0 15% 0 15%;
+  width: 70%;
+  color: black;
+}
+
+.followP{
+  padding-bottom: 1em;
+  margin: 0 15% 0 15%;
+  width: 70%;
+  color: #FF5722;
+}
+
+
+#social{
+  display: inline-block;
+  margin-bottom: 2em;
+}
+
+a{
+  box-sizing: border-box;
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 5px;
+  float: left;
+  font-size: 1rem;
+  line-height: 50px;
+  color: white;
+  transition: all 250ms ease-in-out;
+}
+
+a:hover{
+  margin-top: -5px;
+}
+
+#linkedin, #github, #facebook, #twitter, #email{
+  font-size: 0;
+/*  text-align: center;*/
+  width: 50px;  /* Container's dimensions */
+  height: 50px;
+}
+#linkedin:hover, #github:hover, #facebook:hover, #twitter:hover, #email:hover{
+  display: inline-block;
+  vertical-align: middle;
+  height: 150px;
+}

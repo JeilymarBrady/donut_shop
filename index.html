@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+  <meta charset="UTF-8">
+  <title>Shops Data</title>
+  <link type="text/css" rel="stylesheet" href="css/shops.css" />
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <!-- Material Design Lite -->
+   <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.1/material.grey-deep_orange.min.css" />
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+ <body>
+  <div class="wrapper">
+  <h3 class="header"> TopPot Doughnuts</h3>
+  <ul class="ul">
+    <li class="scroll-on-page-link" href="#scroll-link-shops">Shops</li>
+    <li class="scroll-on-page-link" href="#scroll-link-options">Options</li>
+    <li class="scroll-on-page-link" href="#scroll-link-follow">Follow</li>
+    <li class="scroll-on-page-link" href="#scroll-link-contact">Contact</li>
+  </ul>
+</div>
+<div class="shops" id="scroll-link-shops">
+  <h3 class="headerS">Shops</h3>
+ <div class="container">
+  <div id="insertTable"></div>
+  <p></p>
+  <div id="userInput">
+    <form id="createStore">
+      <fieldset>
+        <legend>Add or edit a location</legend>
+        <!-- Simple Textfield -->
+      <form action="#">
+        <div class="mdl-textfield mdl-js-textfield textfield-demo">
+          <input class="mdl-textfield__input" type="text" id="name" />
+          <label class="mdl-textfield__label" for="name">Location name... </label>
+        </div>
+      <!-- Numeric Textfield -->
+        <div class="mdl-textfield mdl-js-textfield textfield-demo">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="minCustomers" />
+          <label class="mdl-textfield__label" for="minCustomers">Minimum hourly customers.. </label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
+      <!-- Numeric Textfield -->
+        <div class="mdl-textfield mdl-js-textfield textfield-demo">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="maxCustomers" />
+          <label class="mdl-textfield__label" for="maxCustomers">Maximum hourly customers.. </label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
+      <!-- Numeric Textfield -->
+        <div class="mdl-textfield mdl-js-textfield textfield-demo">
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="avgDonuts" />
+          <label class="mdl-textfield__label" for="avgDonuts">Average donuts per customer..</label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
+      </form>
+      <br>
+      <!-- <input class="button" type="submit"> -->
+      <!-- Colored FAB button with ripple -->
+<button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" class="button">
+  <i class="material-icons">add</i>
+</button>
+      </fieldset>
+    </form>
+  </div>
+ </div>
+ <section>
+</div>
+<div class="options" id="scroll-link-options">
+  <h3 class="headerO">Donuts</h3>
+  <p class="optionsP">Vivamus nizzle check it out egizzle nisi consectetizzle sure. Vivamizzle fo amizzle lacizzle. Nizzle sizzle shut the shizzle up eget lacizzle pimpin' feugizzle. Praesent suscipizzle viverra ipsum. Uhuh ... yih! izzle arcu. Vestibulum enim enim, sizzle shit, congue away, daahng dawg non, libero. Sure crunk dang break yo neck, yall eros hizzle shit. Quisque pede we gonna chung, fo shizzle my nizzle pulvinar, dizzle gangsta, mollizzle sheezy amizzle, erat. Fo dawg dui. Cool risus purizzle, elementum consectetuer, sollicitudizzle check it out, consequat imperdiet, yippiyo. Daahng dawg go to hizzle black eu mi rutrum crazy. Mofo own yo' sagittizzle ipsum. Pellentesque dizzle morbi for sure senectizzle tellivizzle netizzle et malesuada fames izzle brizzle egestas. Fo shizzle my nizzle est. You son of a bizzle the bizzle. Ut erizzle that's the shizzle, shizznit quizzle, suscipizzle izzle, gangster pulvinizzle, nisl. The bizzle sagittizzle gravida velizzle.</p>
+</div>
+<div class="follow" id="scroll-link-follow">
+</div>
+<div class="contact" id="scroll-link-contact">
+  <h3 class="headerC">Contact</h3>
+  <div id="social">
+    <a id="linkedin" href="https://www.linkedin.com/in/jeilymarbrady" title="Jeilymar Brady on Linkedin" target="_blank"><img src="https://cdn3.iconfinder.com/data/icons/social-circle/512/social_7-128.png"></i></a>
+    <a id="github" href="https://github.com/JeilymarBrady" title="Jeilymar Brady on GitHub" target="_blank"><img src="https://cdn0.iconfinder.com/data/icons/social-circle/595/github-128.png"></img></a>
+    <a id="facebook" href="https://facebook.com/JeilymarBrady" title="Jeilymar Brady on Facebook" target="_blank"><img src="https://cdn3.iconfinder.com/data/icons/social-circle/512/social_3-128.png"></i></a>
+    <a id="twitter" href="https://twitter.com/JeilymarBrady" title="Jeilymar Brady on Twitter" target="_blank"><img src="https://cdn3.iconfinder.com/data/icons/social-circle/512/social_8-128.png"></i></a>
+    <a id="email" href="jeilymarb@gmail.com" title="Send Jeilymar Brady an E-Mail" target="_blank"><img src="https://cdn3.iconfinder.com/data/icons/social-circle/512/647403-email-128.png"></i></a>
+  </div>
+</div>
+ </div>
+  <script src = "js/shops.js"></script>
+ </body>
+
+</html>
