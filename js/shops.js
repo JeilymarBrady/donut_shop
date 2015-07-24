@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 //Donut shop constructor, declares and instantiates the necessary properties
 var Shop = function(shopName, minCustomers, maxCustomers, avgDonuts){
   this.shopName = shopName;
@@ -13,7 +13,7 @@ var Shop = function(shopName, minCustomers, maxCustomers, avgDonuts){
 Shop.prototype.render = function(){
   this.donutsPerDay();
   if(document.getElementById(this.shopName.toUpperCase())){
-    var update = document.getElementById(this.shopName).childNodes;
+    var update = document.getElementById(this.shopName.toUpperCase()).childNodes;
     for(var j = 1; j < update.length-1; j++){
       update[j].innerHTML = this.hourly[j-1];
     }
@@ -21,16 +21,17 @@ Shop.prototype.render = function(){
   } else {
     var tr = tbl.insertRow();
     tr.id = this.shopName.toUpperCase();
-    var rowData = "<td>" + this.shopName + "</td>";
+
+    var rowData = "<td class='one'>" + this.shopName + "</td>";
     for(var i = 0; i < this.hourly.length; i++){
-      rowData += "<td>" + this.hourly[i] + "</td>";
+      rowData += "<td class='rest'>" + this.hourly[i] + "</td>";
     }
-    tr.innerHTML = rowData + "<td>" + this.totalDonuts + "</td>";
+    tr.innerHTML = rowData + "<td class='total'>" + this.totalDonuts + "</td>";
     tbl.appendChild(tr);
   }
 };
 Shop.prototype.donutsPerDay = function(){
-  for(var i = 0; i < 11; i++){
+  for(var i = 0; i < 12; i++){
     this.totalDonuts += this.hourly[i] = (Math.floor((Math.random() * (this.maxCustomers - this.minCustomers + 1) + this.minCustomers) * this.avgDonuts));
   }
 };
@@ -43,12 +44,18 @@ tbl.id = "Donut_Table";
 var createHeader = (function(){
   var tr = tbl.insertRow();
   tr.id = "table_header";
-  var rowData = "<td id='shops'>" + 'Shops' + "</td>";
-  for(var i = 0; i < 11; i++){
-    var time = 700 + (i*100);
-    rowData += "<td class='times'>" + time + "</td>";
+  var rowData = "<td id='shops'>" + 'SHOPS' + "</td>";
+  for(var i = 0; i < 12; i++){
+    var time = 7 + (i);
+    if(i<5){
+      rowData += "<td class='times'>" + time + "am</td>";
+    } else if (i===5) {
+      rowData += "<td class='times'>" + time + "pm</td>";
+    } else {
+      rowData += "<td class='times'>" + (time - 12) + "pm</td>";
+    }
   }
-  tr.innerHTML = rowData + "<td id='totals'>" + 'Totals' + "</td>";
+  tr.innerHTML = rowData + "<td id='totals'>" + 'TOTALS' + "</td>";
   tbl.appendChild(tr);
   body.appendChild(tbl);
 })();
@@ -56,12 +63,12 @@ var createHeader = (function(){
 var pull = document.getElementById('createStore');
 pull.addEventListener('submit', function(e){
   e.preventDefault();
-  var shopN = document.getElementById('name').value;
-  var minC = parseInt(document.getElementById('minCustomers').value);
-  var maxC = parseInt(document.getElementById('maxCustomers').value);
-  var avgD = parseInt(document.getElementById('avgDonuts').value);
-  var createShop = new Shop(shopN, minC, maxC, avgD);
+if(!(pull.elements[1].value&&pull.elements[2].value&&pull.elements[3].value&&pull.elements[4].value)){
+  return;
+} else {
+  var createShop = new Shop(pull.elements[1].value, parseInt(pull.elements[2].value), parseInt(pull.elements[3].value), parseInt(pull.elements[4].value));
   createShop.render();
+}
 });
 
 var downtown = new Shop('Downtown', 8, 43, 4.5);
