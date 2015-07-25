@@ -47,25 +47,24 @@ li {
   justify-content: center;
 }
 
-body {
-  background-color: antiquewhite;
-}
-
 .headerS{
   color: #FF5722;
 }
 
 #Donut_Table {
-  width: 25px;
-  border: 5px solid antiquewhite;
-  border-radius: 10px;
+  border: .3em solid antiquewhite;
+  border-radius: .7em;
   text-align: center;
-  margin-top: 60 100 60 10;
+  margin-right: 3em;
 }
 
 legend{
   font-weight: bold;
   color: #FF5722;
+}
+
+.rest, .total{
+  color: black;
 }
 
 #shops, #totals, .times, .one{
@@ -76,23 +75,25 @@ legend{
 td{
   border-radius: 5px;
 }
+
 tr:hover:not(#table_header) td{
-  color: #FF5722;
+  color: #FF5722!important;
 }
 
-.table_form{
-  width: 500px;
-  margin-top: 25px;
-  margin-left: 100px;
+.table_form, #createStore{
+  width: 20%;
+  margin-left: 5em;
   color: #F3843E;
   text-align: center;
 }
 
 .shops, .about, .donuts, .contact{
     text-align: center;
+    padding: .5em;
 }
 
 .headerS, .headerA, .headerD, .headerC{
+  margin: 0;
   padding: 1%;
   font-style: oblique;
 }
@@ -100,13 +101,13 @@ tr:hover:not(#table_header) td{
 .p1{
   height: 70%;
   width: 30%;
-  margin-right: 100px;
+  margin-right: 4em;
 }
 
 .p2{
   height: 70%;
   width: 30%;
-  margin-left: 100px;
+  margin-left: 4em;
   margin-bottom: 1em;
 }
 
@@ -120,7 +121,7 @@ tr:hover:not(#table_header) td{
 .about, .contact{
   background-color: antiquewhite;
   color: #FF5722;
-  margin-bottom: 1em;
+  padding: 1em;
 }
 
 .aboutP{
@@ -139,9 +140,13 @@ tr:hover:not(#table_header) td{
   color: antiquewhite;
 }
 
+.contact{
+  background-color: white;
+}
+
 .email_form{
   margin: 1.5em auto;
-  width: 500px;
+  width: 40%;
   color: #F3843E;
   text-align: center;
 }
@@ -149,12 +154,14 @@ tr:hover:not(#table_header) td{
 #social{
   display: inline-block;
   margin-bottom: 2em;
+  width: 100%;
 }
 
-a{
+a.a{
+  margin-left: -2em;
+  margin-right: -2em;
   box-sizing: border-box;
   display: inline-block;
-  margin: 0 .2em 0 .2em;
   font-size: 1em;
   transition: all 250ms ease-in-out;
 }
@@ -163,12 +170,20 @@ a{
   display: inline-block;
   font-size: 0;
 /*  text-align: center;*/
-  width: 35px;  /* Container's dimensions */
-  height: 35px;
+  width: 30%;  /* Container's dimensions */
+  height: 30%;
 }
 #linkedin:hover, #github:hover, #facebook:hover, #twitter:hover, #email:hover{
   display: inline-block;
   vertical-align: middle;
   margin-top: -5px;
   margin-bottom: 5px;
+}
+
+.top{
+  position: fixed;
+  bottom: 1.5em;
+  right: 2em;
+  height: 35px;
+  width: 35px;
 }
