@@ -1,0 +1,188 @@
+*{
+  font-family: Open Sans;
+  font-size: 1.05em;
+}
+.wrapper{
+  color: #FF5722;
+  font-style: oblique;
+  font-weight: bold;
+  text-align: center;
+  background-color: antiquewhite;
+  width: 100%;
+  top: 0px;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  flex-flow: space-around;
+  justify-content: space-between;
+}
+
+.header, .ul{
+  margin: .5em 1em .5em 1em;
+}
+
+li {
+  display: inline-block;
+  list-style: none;
+  padding: .5em;
+}
+.shops{
+  position: relative;
+  margin-top: 5.5em;
+  background-color: white;
+  padding-bottom: 1em;
+}
+.header {
+  text-align: center;
+  color: #FF5722;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  flex-flow: space-around;
+  justify-content: center;
+}
+
+.headerS{
+  color: #FF5722;
+}
+
+#Donut_Table {
+  border: .3em solid antiquewhite;
+  border-radius: .7em;
+  text-align: center;
+  margin-right: 3em;
+}
+
+legend{
+  font-weight: bold;
+  color: #FF5722;
+}
+
+.rest, .total{
+  color: black;
+}
+
+#shops, #totals, .times, .one{
+  color: #FF5722;
+  font-weight: bold;
+}
+
+td{
+  border-radius: 5px;
+}
+
+tr:hover:not(#table_header) td{
+  color: #FF5722!important;
+}
+
+.table_form, #createStore{
+  width: 20%;
+  margin-left: 5em;
+  color: #F3843E;
+  text-align: center;
+}
+
+.shops, .about, .donuts, .contact{
+    text-align: center;
+    padding: .5em;
+}
+
+.headerS, .headerA, .headerD, .headerC{
+  margin: 0;
+  padding: 1%;
+  font-style: oblique;
+}
+
+.p1{
+  height: 70%;
+  width: 30%;
+  margin-right: 4em;
+}
+
+.p2{
+  height: 70%;
+  width: 30%;
+  margin-left: 4em;
+  margin-bottom: 1em;
+}
+
+.donuts{
+  background-color: #FF5722;
+  color: antiquewhite;
+  width: 100%;
+  padding-bottom: 1em;
+}
+
+.about, .contact{
+  background-color: antiquewhite;
+  color: #FF5722;
+  padding: 1em;
+}
+
+.aboutP{
+  padding-bottom: 1em;
+  margin: 0 7% 0 7%;
+  width: 70%;
+  color: black;
+  text-align: left;
+}
+
+.donutsP{
+  text-align: left;
+  padding-bottom: 1em;
+  margin: 0 7% 0 7%;
+  width: 70%;
+  color: antiquewhite;
+}
+
+.contact{
+  background-color: white;
+}
+
+.email_form{
+  margin: 1.5em auto;
+  width: 40%;
+  color: #F3843E;
+  text-align: center;
+}
+
+#social{
+  display: inline-block;
+  margin-bottom: 2em;
+  width: 100%;
+}
+
+a.a{
+  margin-left: -2em;
+  margin-right: -2em;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 1em;
+  transition: all 250ms ease-in-out;
+}
+
+#linkedin, #github, #facebook, #twitter, #email{
+  display: inline-block;
+  font-size: 0;
+/*  text-align: center;*/
+  width: 30%;  /* Container's dimensions */
+  height: 30%;
+}
+#linkedin:hover, #github:hover, #facebook:hover, #twitter:hover, #email:hover{
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-bottom: 5px;
+}
+
+.top{
+  position: fixed;
+  bottom: 1.5em;
+  right: 2em;
+  height: 35px;
+  width: 35px;
+}
