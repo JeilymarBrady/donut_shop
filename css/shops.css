@@ -28,9 +28,8 @@ li {
   padding: .5em;
 }
 .shops{
+  position: relative;
   margin-top: 5.5em;
-}
-.shops{
   background-color: white;
   padding-bottom: 1em;
 }
